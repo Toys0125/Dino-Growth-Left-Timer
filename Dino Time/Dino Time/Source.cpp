@@ -5,7 +5,7 @@
 using namespace std;
 //Formula for dino (total minutes/ (max grow-min grow))x(max grow - current grow)
 void CaculateGrowth(int totalMins, float maxGrowth, float minGrowth, float curGrowth, int totaltimeUsed);
-void DisplayStages();
+void DisplayStages(bool);
 void PushUp(float &input);
 int main() {
 	char input1 = ' ', input2 = ' ', input3;
@@ -19,7 +19,7 @@ int main() {
 			cin >> input2;
 			//Allo Times
 			if (input2 == '1') {
-				DisplayStages();
+				DisplayStages(false);
 				cin >> input3;
 
 				if (input3 == '1') {
@@ -45,7 +45,7 @@ int main() {
 			}
 			//Cerato Times
 			if (input2 == '2') {
-				DisplayStages();
+				DisplayStages(false);
 				cin >> input3;
 
 				if (input3 == '1') {
@@ -123,7 +123,7 @@ int main() {
 			}
 			//Giga Times
 			if (input2 == '5') {
-				DisplayStages();
+				DisplayStages(true);
 				cin >> input3;
 
 				if (input3 == '1') {
@@ -204,7 +204,7 @@ int main() {
 			}
 			//Trex Times
 			if (input2 == '8') {
-				DisplayStages();
+				DisplayStages(true);
 				cin >> input3;
 
 				if (input3 == '1') {
@@ -241,7 +241,7 @@ int main() {
 			cin >> input2;
 			//Triceratops Times
 			if (input2 == '1') {
-				DisplayStages();
+				DisplayStages(true);
 				cin >> input3;
 
 				if (input3 == '1') {
@@ -441,9 +441,14 @@ void CaculateGrowth(int totalMins, float maxGrowth, float minGrowth, float curGr
 
 }
 
-void DisplayStages()
+void DisplayStages(bool fourStages=false)
 {
-	cout << "Is it a\n1. Hatchling\n2. Juvie\n3. Sub/Adult\n4. Adult" << endl;
+	if (fourStages)
+	cout << "Is it a\n1. Hatchling\n2. Juvie\n3. Sub\n4. Adult" << endl;
+	else
+	{
+		cout << "Is it a\n1. Hatchling\n2. Juvie\n3. Adult" << endl;
+	}
 	cout << "Then input curent Growth" << endl;
 }
 
