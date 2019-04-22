@@ -5,7 +5,7 @@
 using namespace std;
 //Formula for dino (total minutes/ (max grow-min grow))x(max grow - current grow)
 void CaculateGrowth(int totalMins, float maxGrowth, float minGrowth, float curGrowth, int totaltimeUsed);
-void DisplayStages(bool);
+void DisplayStages(bool=false);
 void PushUp(float &input);
 int main() {
 	char input1 = ' ', input2 = ' ', input3;
@@ -19,7 +19,7 @@ int main() {
 			cin >> input2;
 			//Allo Times
 			if (input2 == '1') {
-				DisplayStages(false);
+				DisplayStages();
 				cin >> input3;
 
 				if (input3 == '1') {
@@ -45,7 +45,7 @@ int main() {
 			}
 			//Cerato Times
 			if (input2 == '2') {
-				DisplayStages(false);
+				DisplayStages();
 				cin >> input3;
 
 				if (input3 == '1') {
@@ -441,7 +441,7 @@ void CaculateGrowth(int totalMins, float maxGrowth, float minGrowth, float curGr
 
 }
 
-void DisplayStages(bool fourStages=false)
+void DisplayStages(bool fourStages)
 {
 	if (fourStages)
 	cout << "Is it a\n1. Hatchling\n2. Juvie\n3. Sub\n4. Adult" << endl;
