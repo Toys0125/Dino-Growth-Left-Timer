@@ -15,7 +15,7 @@ int main() {
 		cin >> input1;
 		if (input1 = '1') {
 			cout << "Input which dino you using..." << endl;
-			cout << "1. Allo\n2. Cerato Not Done\n3. Carno\n4. Dilo\n5. Dilo\n6. Giga\n7. Sucho\n8. Utah\n9. TRex" << endl;
+			cout << "1. Allo\n2. Cerato\n3. Carno\n4. Dilo\n5. Giga\n6. Sucho\n7. Utah\n8. TRex" << endl;
 			cin >> input2;
 			//Allo Times
 			if (input2 == '1') {
