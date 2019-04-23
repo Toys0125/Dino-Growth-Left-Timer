@@ -1,6 +1,7 @@
 //Program by Toys0125
 #include <iostream>
 #include <string>
+#include <math.h>
 
 using namespace std;
 //Formula for dino (total minutes/ (max grow-min grow))x(max grow - current grow)
@@ -13,7 +14,7 @@ int main() {
 	while (input1 != 'q') {
 		cout << "1. Carnivore\n2. Herbivore\nq. To quit..." << endl;
 		cin >> input1;
-		if (input1 = '1') {
+		if (input1 == '1') {
 			cout << "Input which dino you using..." << endl;
 			cout << "1. Allo\n2. Cerato\n3. Carno\n4. Dilo\n5. Giga\n6. Sucho\n7. Utah\n8. TRex" << endl;
 			cin >> input2;
@@ -235,7 +236,7 @@ int main() {
 
 
 		}
-		if (input1 = '2') {
+		if (input1 == '2') {
 			cout << "Input which dino you using..." << endl;
 			cout << "1. Tricera\n2. Galli\n3. Diablo\n4. Maia\n5. Pachy\n6. Para\n7. Dryo" << endl;
 			cin >> input2;
@@ -434,9 +435,13 @@ int main() {
 
 void CaculateGrowth(int totalMins, float maxGrowth, float minGrowth, float curGrowth, int totaltimeLeft)
 {
-	float remainingTime;
+	float remainingTime, seconds;
 	remainingTime = (float)(totalMins / (maxGrowth - minGrowth)*(maxGrowth - curGrowth));
-	cout << "The remaining for this stage is: " << remainingTime << " mins" << endl;
+	seconds = fmod(remainingTime,1.0);
+	remainingTime -= seconds;
+	seconds = seconds * 60;
+	seconds = floor(pow(10, 1)*seconds) / pow(10, 1);
+	cout << "The remaining for this stage is: " << remainingTime << " mins " << seconds << " secs" << endl;
 	cout << "Total time remaining till full grown is: " << (remainingTime + (float)totaltimeLeft) << " mins" << endl;
 
 }
