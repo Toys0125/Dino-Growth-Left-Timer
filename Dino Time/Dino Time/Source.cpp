@@ -216,7 +216,7 @@ int main() {
 				if (input3 == '2') {
 					cin >> input4;
 					PushUp(input4);
-					CaculateGrowth(100, 1000, 500, input4, 220);
+					CaculateGrowth(100, 1000, 500, input4, 320);
 				}
 				if (input3 == '3') {
 					cin >> input4;
