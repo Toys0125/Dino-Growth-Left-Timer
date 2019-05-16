@@ -211,7 +211,7 @@ int main() {
 				if (input3 == '1') {
 					cin >> input4;
 					PushUp(input4);
-					CaculateGrowth(30, 1000, 0, input4, 320);
+					CaculateGrowth(30, 1000, 0, input4, 420);
 				}//Juve .5/.8
 				if (input3 == '2') {
 					cin >> input4;
