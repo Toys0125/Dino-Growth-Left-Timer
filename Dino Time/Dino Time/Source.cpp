@@ -53,17 +53,17 @@ int main() {
 					cin >> input4;
 					PushUp(input4);
 					cout << "Need correct growth ammount..." << endl;
-					CaculateGrowth(30, 1000, 0, input4, 150);
+					CaculateGrowth(30, 1000, 0, input4, 140);
 				}
 				if (input3 == '2') {
 					cin >> input4;
 					PushUp(input4);
-					CaculateGrowth(50, 800, 500, input4, 100);
+					CaculateGrowth(50, 800, 500, input4, 90);
 				}
 				if (input3 == '3') {
 					cin >> input4;
 					PushUp(input4);
-					CaculateGrowth(100, 1000, 800, input4, 0);
+					CaculateGrowth(90, 1000, 800, input4, 0);
 				}
 				if (input3 > '3' || input4 < '1') {
 					cout << "Incorrect range." << endl;
@@ -211,17 +211,17 @@ int main() {
 				if (input3 == '1') {
 					cin >> input4;
 					PushUp(input4);
-					CaculateGrowth(30, 1000, 0, input4, 420);
+					CaculateGrowth(30, 1000, 0, input4, 380);
 				}//Juve .5/.8
 				if (input3 == '2') {
 					cin >> input4;
 					PushUp(input4);
-					CaculateGrowth(100, 1000, 500, input4, 320);
+					CaculateGrowth(100, 1000, 500, input4, 280);
 				}
 				if (input3 == '3') {
 					cin >> input4;
 					PushUp(input4);
-					CaculateGrowth(220, 1000, 780, input4, 100);
+					CaculateGrowth(180, 1000, 780, input4, 100);
 				}
 				if (input3 == '4') {
 					cin >> input4;
